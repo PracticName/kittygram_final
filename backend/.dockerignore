@@ -1,5 +1,3 @@
-node_modules
-build
 venv
 .git
 db.sqlite3
