@@ -11,6 +11,7 @@
    ```https://github.com/PracticName/kittygram_final```
 2. Заполните следующие переменные в файле .env (файл создайте в корне проекта)
    Пример:
+   ```
    POSTGRES_DB=django 
    POSTGRES_USER=django
    POSTGRES_PASSWORD=password
@@ -20,14 +21,15 @@
    SECRET_KEY=django
    ALLOWED_HOSTS=127.0.0.1,localhost,<ip сервера>,<твой домен>
    DEBUG=True
-3. Запустите Docker
-4. Запустите файл docker-compose.yml в корне проекта
+   ```
+4. Запустите Docker
+5. Запустите файл docker-compose.yml в корне проекта
    ```docker compose --build up```
    произойдет сборка образов и запуск контейнеров
-5. Выполняем миграции и создайте пользователя
+6. Выполняем миграции и создайте пользователя
    ```docker compose exec backend pyhon manage.py migrate```
    ```docker compose exec backend pyhon manage.py createsuperuser```
-6. Соберите статику
+7. Соберите статику
    ```docker compose exec backend pyhon manage.py collectstatic```
    ```docker compose exec backend backend cp -r /app/collected_static/. /backend_static/static```
 
