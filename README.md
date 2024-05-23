@@ -1,8 +1,8 @@
-# kittygram_final
+# kittygram
 ## Описание
   Данный сервис предоставляет Вам возможность делиться своими _котиками_ с сообществом __kittygram__.
   Вы можете добавить цвет котика, год рождения, фотографию и его достижения; отредактировать профиль котика.
-  Чтобы использовать сервис, необходимо зарегестрироваться (```https://kittys.hopto.org/```).
+  Чтобы использовать сервис, необходимо зарегестрироваться.
 
 Сервис предназначен только для котиков, размещение на нем собачек __запрещено__!
 
@@ -11,6 +11,7 @@
    ```https://github.com/PracticName/kittygram_final```
 2. Заполните следующие переменные в файле .env (файл создайте в корне проекта)
    Пример:
+   ```
    POSTGRES_DB=django 
    POSTGRES_USER=django
    POSTGRES_PASSWORD=password
@@ -20,8 +21,9 @@
    SECRET_KEY=django
    ALLOWED_HOSTS=127.0.0.1,localhost,<ip сервера>,<твой домен>
    DEBUG=True
+   ```
 3. Запустите Docker
-4. Запустите файл docker-compose.yml в корне проекта
+4. Запустите файл ```docker-compose.yml``` в корне проекта
    ```docker compose --build up```
    произойдет сборка образов и запуск контейнеров
 5. Выполняем миграции и создайте пользователя
@@ -33,6 +35,7 @@
 
 Для деплоя на сервер на ```https://github.com/``` в репозитории проекта перейдите _Settings-->Secrets and variables-->Actions_.
 Создайте следующие секреты через кнопку _New repository secret_
+```
 DOCKER_PASSWORD - пароль Docker
 DOCKER_USERNAME - имя пользователя Docker
 HOST - ip сервера
@@ -41,10 +44,10 @@ SSH_PASSPHRASE - пароль к закрытому кдючу
 TELEGRAM_TO - ваш id telegram
 TELEGRAM_TOKEN - ключ вашего бота в telegram
 USER - имя пользователя на сервере
-
+```
 ## Технологии
-1. Полный список библиотек по фронтенду /frontend/package.json
-2. Полный список библиотек по бекенду /backend/requirements.txt
+1. Полный список библиотек по фронтенду ```/frontend/package.json```
+2. Полный список библиотек по бекенду ```/backend/requirements.txt```
 3. Docker ```https://www.docker.com/```
 4. Nginx ```https://nginx.org/```
 5. Telegram ```https://telegram.org/```
